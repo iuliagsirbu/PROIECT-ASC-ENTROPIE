@@ -1,9 +1,14 @@
 import math
+import ast
 
 def run():
-    from wordle import dicty
-    with open("idk.txt", "w") as a:
-        print(dicty, file = a)
+    #from wordle import dicty
+
+    with open("frecvactualizata.txt", "r") as l:
+        data = l.read()
+    dicty = ast.literal_eval(data)
+
+    #print(dicty)
 
     suma = {}
     for x in dicty:  # aparitiile totale ale fiecarei litere, indiferent de pozitia ei
