@@ -15,7 +15,7 @@ s = open("solutii.txt", "w")
 
 with open("cuvinte_low.txt", "r") as c:
     for cuv in c:
-        print(cuv)
+        #print(cuv)
         program2.reset()
 
         guess = ""
@@ -23,7 +23,7 @@ with open("cuvinte_low.txt", "r") as c:
             guess = k.readline()
         dicty = {}
         s.write(cuv +  ", ")
-        #s.write(f"{BG_BBLUE}{cuv}{RESET}" + ", ")
+        print(f"{BG_BBLUE}{cuv}{RESET}", end= "")
         with open("test.txt", "r") as l:
             data = l.read()
         dicty = ast.literal_eval(data)
@@ -41,7 +41,7 @@ with open("cuvinte_low.txt", "r") as c:
                     if guess[i] in cuv:
                         if cuv[i]==guess[i]:
                             s.write(cuv[i])
-                            # s.write(f"{BG_GREEN}{cuv[i]}{RESET}" + ", ")
+                            print(f"{BG_GREEN}{cuv[i]}{RESET}", end = "")
                             for x in dicty:
                                 if x!=cuv[i]:
                                     list = dicty[x]
@@ -49,13 +49,13 @@ with open("cuvinte_low.txt", "r") as c:
                                     dicty[x] = list
                         elif cuv[i]!=guess[i]:
                             s.write(guess[i])
-                            #s.write(f"{BG_YELLOW}{guess[i]}{RESET}" + ", ")
+                            print(f"{BG_YELLOW}{guess[i]}{RESET}", end= "")
                             list = dicty[guess[i]]
                             list[i] = 0
                             dicty[guess[i]] = list
                     elif guess[i] not in cuv:
                         s.write(guess[i])
-                        #s.write(f"{BG_RED}{guess[i]}{RESET}" + ", ")
+                        print(f"{BG_RED}{guess[i]}{RESET}", end ="")
                         for x in dicty:
                             if x == guess[i]:
                                 list = dicty[x]
@@ -72,15 +72,19 @@ with open("cuvinte_low.txt", "r") as c:
                 if ok2 == 1:
                     ok = 1
                 s.write(", ")
+                print(end=", ")
+            nr_incercari = nr_incercari - 1
             s.write(str(nr_incercari))
             if nr_incercari in plotvalues:
                 plotvalues[nr_incercari] += 1
             else:
                 plotvalues.update({nr_incercari: 1})
         s.write("\n")
+        print("\n")
 s.close()
 nrghiciri = []
 nrcuvinte = []
+mean = 0
 #print(plotvalues)
 newplotvalues = collections.OrderedDict(sorted(plotvalues.items()))
 plotvalues = newplotvalues
@@ -89,5 +93,9 @@ for key in plotvalues.keys():
     #print(key)
     nrghiciri.append(key)
     nrcuvinte.append(plotvalues[key])
+for i in range(len(nrghiciri)):
+    mean = mean + nrghiciri[i] * nrcuvinte[i]
+mean = mean / sum(nrcuvinte)
 plt.bar(range(len(plotvalues)), nrcuvinte, tick_label = nrghiciri)
+plt.title(f"Numarul de incercari necesare este {mean}")
 plt.show()
