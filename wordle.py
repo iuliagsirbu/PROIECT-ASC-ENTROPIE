@@ -13,17 +13,18 @@ plotvalues = {}
 
 s = open("solutii.txt", "w")
 
-with open("cuvinte_low.txt", "r") as c:
+with open("cuvinte.txt", "r") as c:
     for cuv in c:
-        #print(cuv)
+        print(cuv)
         program2.reset()
 
         guess = ""
         with open("cuvordentropie.txt", "r") as k:
             guess = k.readline()
         dicty = {}
-        s.write(cuv +  ", ")
-        print(f"{BG_BBLUE}{cuv}{RESET}", end= "")
+        word = cuv.strip("\n")
+        s.write(word +  ", ")
+        #print(f"{BG_BBLUE}{cuv}{RESET}", end= "")
         with open("test.txt", "r") as l:
             data = l.read()
         dicty = ast.literal_eval(data)
@@ -41,7 +42,7 @@ with open("cuvinte_low.txt", "r") as c:
                     if guess[i] in cuv:
                         if cuv[i]==guess[i]:
                             s.write(cuv[i])
-                            print(f"{BG_GREEN}{cuv[i]}{RESET}", end = "")
+                            #print(f"{BG_GREEN}{cuv[i]}{RESET}", end = "")
                             for x in dicty:
                                 if x!=cuv[i]:
                                     list = dicty[x]
@@ -49,13 +50,13 @@ with open("cuvinte_low.txt", "r") as c:
                                     dicty[x] = list
                         elif cuv[i]!=guess[i]:
                             s.write(guess[i])
-                            print(f"{BG_YELLOW}{guess[i]}{RESET}", end= "")
+                            #print(f"{BG_YELLOW}{guess[i]}{RESET}", end= "")
                             list = dicty[guess[i]]
                             list[i] = 0
                             dicty[guess[i]] = list
                     elif guess[i] not in cuv:
                         s.write(guess[i])
-                        print(f"{BG_RED}{guess[i]}{RESET}", end ="")
+                        #print(f"{BG_RED}{guess[i]}{RESET}", end ="")
                         for x in dicty:
                             if x == guess[i]:
                                 list = dicty[x]
@@ -72,7 +73,7 @@ with open("cuvinte_low.txt", "r") as c:
                 if ok2 == 1:
                     ok = 1
                 s.write(", ")
-                print(end=", ")
+                #print(end=", ")
             nr_incercari = nr_incercari - 1
             s.write(str(nr_incercari))
             if nr_incercari in plotvalues:
@@ -80,7 +81,7 @@ with open("cuvinte_low.txt", "r") as c:
             else:
                 plotvalues.update({nr_incercari: 1})
         s.write("\n")
-        print("\n")
+        #print("\n")
 s.close()
 nrghiciri = []
 nrcuvinte = []
