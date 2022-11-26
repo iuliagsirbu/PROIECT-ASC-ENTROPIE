@@ -15,9 +15,9 @@ okalph = 0
 for i in range(65,91):
     alph[chr(i)] = [0,5]
 
-s = open("solutii_low.txt", "w")
+s = open("solutii.txt", "w")
 
-with open("cuvinte_low.txt", "r") as c:
+with open("cuvinte.txt", "r") as c:
     for cuv in c:
         print(cuv)
         program2.reset()
