@@ -25,7 +25,7 @@ with open("cuvinte.txt", "r") as c:
         dicty = {}
         word = cuv.strip("\n")
         s.write(word + ", ")
-        #print(f"{BG_BBLUE}{cuv}{RESET}", end= "")
+        print(f"{BG_BBLUE}{cuv}{RESET}", end= "")
         with open("test.txt", "r") as l:
             data = l.read()
         dicty = ast.literal_eval(data)
@@ -41,8 +41,8 @@ with open("cuvinte.txt", "r") as c:
             while ok == 0:
                 alph = alph.fromkeys(alph, [0,5])
                 nr_incercari += 1
-                #print("\n")
-                #print("guess este ", guess, " dictionarul este ", dicty)
+                print("\n")
+                print("guess este ", guess, " dictionarul este ", dicty)
                 ok2 = 1
                 for i in range(5):
                     if guess[i] in cuv:
@@ -50,7 +50,7 @@ with open("cuvinte.txt", "r") as c:
                             alph[guess[i]] = [1,i]
                             okalph = 1
                             s.write(cuv[i])
-                            #print(f"{BG_GREEN}{cuv[i]}{RESET}", end = "")
+                            print(f"{BG_GREEN}{cuv[i]}{RESET}", end = "")
                             for x in dicty:
                                 if x != cuv[i]:
                                     list = dicty[x]
@@ -60,13 +60,13 @@ with open("cuvinte.txt", "r") as c:
                             alph[guess[i]] = [1,5]
                             okalph = 1
                             s.write(guess[i])
-                            #print(f"{BG_YELLOW}{guess[i]}{RESET}", end= "")
+                            print(f"{BG_YELLOW}{guess[i]}{RESET}", end= "")
                             list = dicty[guess[i]]
                             list[i] = 0
                             dicty[guess[i]] = list
                     elif guess[i] not in cuv:
                         s.write(guess[i])
-                        #print(f"{BG_RED}{guess[i]}{RESET}", end ="")
+                        print(f"{BG_RED}{guess[i]}{RESET}", end ="")
                         list = dicty[guess[i]]
                         list = [0]*5
                         dicty[guess[i]] = list        
@@ -97,24 +97,22 @@ with open("cuvinte.txt", "r") as c:
                 if ok2 == 1:
                     ok = 1
                 s.write(", ")
-                #print(end=", ")
+                print(end=", ")
             s.write(str(nr_incercari))
             if nr_incercari in plotvalues:
                 plotvalues[nr_incercari] += 1
             else:
                 plotvalues.update({nr_incercari: 1})
         s.write("\n")
-        #print("\n")
+        print("\n")
 s.close()
+
 nrghiciri = []
 nrcuvinte = []
 mean = 0
-# print(plotvalues)
 newplotvalues = collections.OrderedDict(sorted(plotvalues.items()))
 plotvalues = newplotvalues
-# print(plotvalues)
 for key in plotvalues.keys():
-    # print(key)
     nrghiciri.append(key)
     nrcuvinte.append(plotvalues[key])
 for i in range(len(nrghiciri)):
