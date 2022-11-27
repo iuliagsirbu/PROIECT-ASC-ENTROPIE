@@ -26,7 +26,6 @@ minim – nu neapărat 6 – de încercări un cuvânt de 5 litere).
 
 Pentru ca algoritmul sa joace Wordle optim trebuie sa ne legam de Teoria Informatiei, mai exact de conceptul de Entropie, cat si de cateva concepte din teoria probabilitatilor.
 ![](CodeCogsEqn (2).gif)
-I(x_{i}) = \log_{2} (\frac{1}{p_{i}})
 H(x) = E(I(x)) = \sum_{i=1}^{N} {p_{i}}\log_{2}\frac{1}{{p_{i}}}
 P(eveniment \ A)=\frac{numar \ situatii \ in \ care \ se \ intampla \ A}{numar \ total \ de \ situatii}
 
@@ -68,7 +67,7 @@ Echipa a fost formata din:
 
 ## Referinte
 
-https://stackoverflow.com
-https://www.geeksforgeeks.org/graph-plotting-in-python-set-1/
-https://www.w3schools.com/python/
-https://cs.unibuc.ro/~crusu/asc/Arhitectura%20Sistemelor%20de%20Calcul%20(ASC)%20-%20Curs%200x02.pdf
+- https://stackoverflow.com
+- https://www.geeksforgeeks.org/graph-plotting-in-python-set-1/
+- https://www.w3schools.com/python/
+- https://cs.unibuc.ro/~crusu/asc/Arhitectura%20Sistemelor%20de%20Calcul%20(ASC)%20-%20Curs%200x02.pdf
