@@ -52,11 +52,11 @@ In programul curent, guess se cauta pe baza cele mai mari entropii dintre toate 
 
 ### Python
 
-Versiunea de Python folosita este: Python 3.10.6.
-Pentru proiect a fost folosita libraria externa Matplotlib, versiunea 3.6.0.
-IDE: PyCharm 2022.2.3 si Visual Studio Code.
-Git: 2.38.1.windows.1
-Emulatorul de consola Cmder: v1.3.20
+- Versiunea de Python folosita este: Python 3.10.6.
+- Pentru proiect a fost folosita libraria externa Matplotlib, versiunea 3.6.0.
+- IDE: PyCharm 2022.2.3 si Visual Studio Code.
+- Git: 2.38.1.windows.1
+- Emulatorul de consola Cmder: v1.3.20
 
 ## Echipa
 
