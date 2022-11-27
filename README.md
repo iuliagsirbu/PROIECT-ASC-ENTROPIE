@@ -32,6 +32,7 @@ P(eveniment \ A)=\frac{numar \ situatii \ in \ care \ se \ intampla \ A}{numar \
 
 Astfel, am calculat din lista de cuvinte frecventa literelor in total, cat si frecventa fiecarei litere in functie de pozitia acesteia in cuvant. 
 Apoi am calculat entropia pentru fiecare cuvant in parte folosind probabilitatea fiecarei litere.
+![](CodeCogsEqn (1).gif)
 P(frecventa \ litera)=\frac{numar \ de \ aparitii \ pe \ pozitie \ litera }{numar \ total \ de \ aparitii \ litera}
 
 In programul wordle.py se preia cel mai bun cuvant "guess" ghicit, apoi se "joaca" Wordle si in functie de datele aflate apeleaza subprogramul run din program2.py care preia acele date si recalculeaza entropia cuvintelor urmatoare presupuse "guess" si le ordoneaza descrescator in functie de entropie.
