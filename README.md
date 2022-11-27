@@ -38,7 +38,7 @@ In programul wordle.py se preia cel mai bun cuvant "guess" ghicit, apoi se "joac
 In final, numarul mediu necesar pentru ghicirea tuturor cuvintelor este aproximativ: 4.88
 Timp de rulare total pentru cele 11454 de cuvinte: 9 ore.
 
-GRAFIC_TOTAL.png
+![](GRAFIC_TOTAL.png)
 
 ### Reflectii
 
