@@ -1,6 +1,6 @@
 # Arhitectura Sistemelor de Calcul - Proiect 0x00 
 
-Aceasta este o soluție a [Proiectului 0x00 - Jocul Wordle] (https://cs.unibuc.ro/~crusu/asc/Arhitectura%20Sistemelor%20de%20Calcul%20(ASC)%20-%20Proiect%200x00%202022.pdf).
+Aceasta este o soluție a [Proiectului 0x00 - Jocul Wordle](https://cs.unibuc.ro/~crusu/asc/Arhitectura%20Sistemelor%20de%20Calcul%20(ASC)%20-%20Proiect%200x00%202022.pdf).
 
 ## Cuprins
 
