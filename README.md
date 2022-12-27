@@ -37,8 +37,8 @@ Apoi am calculat entropia pentru fiecare cuvant in parte folosind probabilitatea
 
 In programul wordle.py se preia cel mai bun cuvant "guess" ghicit, apoi se "joaca" Wordle si in functie de datele aflate apeleaza subprogramul run din program2.py care preia acele date si recalculeaza entropia cuvintelor urmatoare presupuse "guess" si le ordoneaza descrescator in functie de entropie.
 
-In final, numarul mediu necesar pentru ghicirea tuturor cuvintelor este aproximativ: 4.88
-Timp de rulare total pentru cele 11454 de cuvinte: 9 ore.
+- In final, numarul mediu necesar pentru ghicirea tuturor cuvintelor este aproximativ: 4.88
+- Timp de rulare total pentru cele 11454 de cuvinte: 9 ore.
 
 ![](GRAFIC_TOTAL.png)
 
